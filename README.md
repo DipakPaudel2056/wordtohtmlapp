@@ -12,11 +12,8 @@ This project leverages the [Mammoth](https://github.com/mwilkinson106/mammoth.js
 - Preserve document formatting and structure
 - Simple and straightforward API
 
-## Live
-[docxtohtml]()
-
-## Github
-[Github](https://github.com)
+[Livelink](https://wordtohtmlapp.vercel.app/)
+[Github](https://github.com/DipakPaudel2056/wordtohtmlapp)
 
 ## Installation
 
