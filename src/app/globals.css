@@ -40,3 +40,149 @@ a {
     color-scheme: dark;
   }
 }
+main {
+  width: 100%;
+  max-width: 720px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Title */
+.title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #111827;
+}
+
+/* Upload form */
+.uploadForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* File input */
+.file__upload {
+  appearance: none;
+  background: #f9fafb;
+  border: 1px dashed #d1d5db;
+  padding: 14px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #374151;
+  transition: all 0.3s ease;
+}
+
+.file__upload:hover {
+  border-color: #6366f1;
+  background: #f4f5ff;
+}
+
+.file__upload::file-selector-button {
+  margin-right: 12px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.file__upload::file-selector-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
+}
+
+/* Copy button */
+.copy_btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.copy_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.4);
+}
+
+.copy_btn:active {
+  transform: scale(0.98);
+}
+
+/* HTML output area */
+.html-area {
+  margin-top: 24px;
+  padding: 20px;
+  background: #0f172a;
+  color: #e5e7eb;
+  border-radius: 12px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  max-height: 320px;
+  overflow-y: auto;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Custom scrollbar */
+.html-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.html-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.html-area::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 8px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive touch */
+@media (max-width: 600px) {
+  main {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+}

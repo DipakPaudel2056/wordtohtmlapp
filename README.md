@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Word to HTML App
 
-## Getting Started
+A simple application that converts DOCX files to HTML format using Mammoth.
 
-First, run the development server:
+## Overview
+
+This project leverages the [Mammoth](https://github.com/mwilkinson106/mammoth.js) library to transform Microsoft Word documents (.docx) into clean, semantic HTML.
+
+## Features
+
+- Convert .docx files to HTML
+- Preserve document formatting and structure
+- Simple and straightforward API
+
+## Live
+[docxtohtml]()
+
+## Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install mammoth
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```javascript
+const mammoth = require('mammoth');
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+mammoth.convertToHtml({path: "document.docx"})
+    .then(result => {
+        console.log(result.value); // HTML string
+    })
+    .catch(err => console.error(err));
+```
 
-## Learn More
+## Requirements
 
-To learn more about Next.js, take a look at the following resources:
+- Node.js
+- Mammoth library
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
