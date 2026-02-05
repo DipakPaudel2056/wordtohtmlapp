@@ -17,7 +17,6 @@ export default function Home() {
       mammoth
         .convertToHtml({ arrayBuffer })
         .then((result) => {
-          console.log(result.value);
           setHtmlContent(result.value); // The generated HTML
         })
         .catch((err) => {
